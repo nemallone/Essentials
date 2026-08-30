@@ -9,6 +9,7 @@ import com.earth2me.essentials.textreader.KeywordReplacer;
 import com.earth2me.essentials.textreader.TextInput;
 import com.earth2me.essentials.textreader.TextPager;
 import com.earth2me.essentials.userstorage.ModernUserMap;
+import com.earth2me.essentials.utils.BedSpawnLocationUtil;
 import com.earth2me.essentials.utils.CommonPlaceholders;
 import com.earth2me.essentials.utils.DateUtil;
 import com.earth2me.essentials.utils.FormatUtil;
@@ -613,7 +614,7 @@ public class EssentialsPlayerListener implements Listener {
 
         final Location loc = user.getHome(user.getLocation());
         if (loc == null) {
-            PaperLib.getBedSpawnLocationAsync(user.getBase(), false).thenAccept(location -> {
+            BedSpawnLocationUtil.getBedSpawnLocationAsync(user.getBase(), false).thenAccept(location -> {
                 if (location != null) {
                     user.getBase().setCompassTarget(location);
                 }
