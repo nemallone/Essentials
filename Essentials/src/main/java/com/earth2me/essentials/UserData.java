@@ -406,6 +406,15 @@ public abstract class UserData extends PlayerExtension implements IConf {
         config.save();
     }
 
+    public boolean isIgnoreMsg() {
+        return holder.ignoreMsg();
+    }
+
+    public void setIgnoreMsg(final boolean set) {
+        holder.ignoreMsg(set);
+        config.save();
+    }
+
     public boolean isAutoTeleportEnabled() {
         return holder.teleportAuto();
     }

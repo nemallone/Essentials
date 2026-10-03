@@ -80,7 +80,6 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
     private boolean invSee = false;
     private boolean recipeSee = false;
     private boolean enderSee = false;
-    private boolean ignoreMsg = false;
     private Boolean toggleShout;
     private boolean freeze = false;
 
@@ -1036,12 +1035,12 @@ public class User extends UserData implements Comparable<User>, IMessageRecipien
 
     @Override
     public boolean isIgnoreMsg() {
-        return ignoreMsg;
+        return super.isIgnoreMsg();
     }
 
     @Override
     public void setIgnoreMsg(final boolean ignoreMsg) {
-        this.ignoreMsg = ignoreMsg;
+        super.setIgnoreMsg(ignoreMsg);
     }
 
     @Override

@@ -181,6 +181,16 @@ public class UserConfigHolder {
         this.flymode = value;
     }
 
+    private boolean ignoreMsg = false;
+
+    public boolean ignoreMsg() {
+        return this.ignoreMsg;
+    }
+
+    public void ignoreMsg(final boolean value) {
+        this.ignoreMsg = value;
+    }
+
     private boolean muted = false;
 
     public boolean muted() {
